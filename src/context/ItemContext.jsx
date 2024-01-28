@@ -14,6 +14,17 @@ const getDefaultCart = () => {
 const ItemContext = ({ children }) => {
     const [cartItems, setCartItems] = useState(getDefaultCart())
 
+    const getTotal = () => {
+        let total = 0
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                let itemInfo = Data.find((d) => d.id === item)
+                total += cartItems[item] * itemInfo?.price
+            }
+        }
+        return total
+    }
+
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
     }
@@ -23,7 +34,7 @@ const ItemContext = ({ children }) => {
     }
 
     const value = {
-        cartItems, setCartItems, addToCart, removeFromCart
+        cartItems, setCartItems, addToCart, removeFromCart, getTotal
     }
 
     console.log(cartItems);
