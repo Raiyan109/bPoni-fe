@@ -1,7 +1,6 @@
 .swiper {
-    width: 100%;
+    width: 1500px;
     height: 600px;
-    margin-right: 600px;
     padding-right: 300px;
     z-index: 0;
 }

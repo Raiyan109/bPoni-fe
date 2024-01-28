@@ -64,12 +64,20 @@ const Donuts = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://cdn.magloft.com/github/swiper/images/page-002.jpg" />
+                    <div className='flex justify-center items-center gap-3 ml-[600px] mt-14'>
+                        {Data.slice(1, 4).map(({ id, name, image, price }) => (
+                            <Donut key={id} name={name} image={image} price={price} id={id} />
+                        ))}
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://cdn.magloft.com/github/swiper/images/page-003.jpg" />
+                    <div className='flex justify-center items-center gap-3 ml-[600px] mt-14'>
+                        {Data.slice(3, 6).map(({ id, name, image, price }) => (
+                            <Donut key={id} name={name} image={image} price={price} id={id} />
+                        ))}
+                    </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <img src="https://cdn.magloft.com/github/swiper/images/page-004.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -86,7 +94,7 @@ const Donuts = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="https://cdn.magloft.com/github/swiper/images/page-009.jpg" />
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
 
         </div>
