@@ -6,18 +6,22 @@ import ForgotPassword from "../pages/ForgotPassword";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
+import Cart from "../components/Cart";
 
 
 const Layout = () => {
     return (
         <div className="main">
             <Navbar />
-            <div className="container flex">
-                <div className="menuContainer w-auto lg:w-[480px] py-1 px-3 lg:px-7 border-r border-gray-500">
+            <div className=" flex">
+                <div className="menuContainer w-auto lg:w-[480px] py-1 px-3 lg:px-7 border-r border-gray-500/90 hidden lg:block">
                     <Menu />
                 </div>
                 <div className="contentContainer py-1 px-7 w-full">
                     <Outlet />
+                </div>
+                <div className="menuContainer w-auto lg:w-[480px] py-1 px-3 lg:px-7  fixed top-0 right-0 lg:block">
+                    <Cart />
                 </div>
             </div>
             <Footer />
