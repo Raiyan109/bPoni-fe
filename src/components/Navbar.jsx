@@ -4,7 +4,10 @@ import { FaLocationArrow } from "react-icons/fa";
 import { BsFillPersonFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import avatar from '../assets/avatar.jpeg'
+import { useState } from "react";
+
 const Navbar = () => {
+    const [showModal, setShowModal] = useState(false)
     return (
         <header className="p-3  text-gray-800">
             <div className="flex justify-between h-16 mx-auto px-3">
@@ -17,7 +20,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <ul className="items-stretch hidden space-x-3 lg:flex">
+                <ul className="items-stretch space-x-3 flex">
                     <li className="flex mt-4">
                         <div className="relative">
                             <span className="absolute top-2 pl-1">
@@ -50,7 +53,18 @@ const Navbar = () => {
                     <img src={avatar} alt="" className="w-10 h-10 object-contain rounded-full" />
 
                 </div>
-                <button className="p-4 lg:hidden">
+                {showModal &&
+                    <div className="mt-4 flex flex-col-reverse items-center absolute top-14 right-7 bg-orange-200 pb-20 px-3">
+                        <div className="flex gap-1 items-center">
+                            <button className=" rounded"><GiHamburgerMenu /></button>
+                            <h1 className="text-sm md:text-lg">Orders</h1>
+                        </div>
+
+                        <img src={avatar} alt="" className="w-10 h-10 object-contain rounded-full" />
+
+                    </div>
+                }
+                <button className="p-4 lg:hidden" onClick={() => setShowModal(!showModal)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-gray-800">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
