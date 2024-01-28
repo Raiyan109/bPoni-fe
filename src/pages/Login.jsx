@@ -1,79 +1,59 @@
 import { Link } from "react-router-dom";
 import logo from '../assets/react.svg'
+import bg from '../assets/pexels-jonathan-schmer-7967378.jpg'
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaRegQuestionCircle } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+import avatar from '../assets/avatar.jpeg'
+import { FaRegMessage } from "react-icons/fa6";
 
 const Login = () => {
     const handleSubmit = () => {
 
     }
     return (
-        <>
-            <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
-                <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
-                    <div className="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
-                        <div className="rounded-xl bg-white shadow-xl">
-                            <div className="p-6 sm:p-16">
-                                <div className="space-y-4">
-                                    <img src={logo} loading="lazy" className="w-10" alt="logo" />
-                                    <h2 className="mb-8 text-2xl text-cyan-900 font-bold">Login to unlock the <br /> best of Dream Colleges.</h2>
-                                </div>
-                                <form onSubmit={handleSubmit}>
-                                    <div className="mt-16 grid space-y-4">
-                                        <label className="font-semibold text-xs" >Username or Email</label>
-                                        <input
-
-                                            className="flex items-center group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100" type="email" />
-
-                                        <div className="relative w-full">
-                                            <div className="absolute inset-y-0 right-1 flex items-center px-2 top-6 text-2xl cursor-pointer">
-                                                {/* Show password icon */}
-                                                {/* <div onClick={togglePassword}>
-                                                    {showPassword ? (<AiFillEyeInvisible />) : (<AiFillEye />)}
-                                                </div> */}
-                                            </div>
-                                            <label className="font-semibold text-xs mt-3" >Password</label>
-                                            <input
-
-                                                className=" group w-full py-3 px-3 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                                            // type={showPassword ? "text" : "password"} 
-                                            />
-                                        </div>
-
-
-                                        <input className='flex items-center justify-center group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300  hover:text-black text-white font-semibold bg-gray-800 hover:bg-gray-300 cursor-pointer' type="submit" value="Login" />
-
-                                        <p>Or use any of these...</p>
-
-                                        <button
-                                            className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
-
-                                            <div className="relative flex items-center space-x-4 justify-center">
-                                                <img src="https://tailus.io/sources/blocks/social/preview/images/google.svg" className="absolute left-0 w-5" alt="google logo" />
-                                                <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue with Google</span>
-                                            </div>
-                                        </button>
-
-                                        <button
-                                            className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
-                                     hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
-                                            <div className="relative flex items-center space-x-4 justify-center">
-                                                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" className="absolute left-0 w-5" alt="Facebook logo" />
-                                                <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue with Facebook</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </form>
-
-                                <p className='mt-6 font-semibold'>New to Dream Colleges?
-                                    <Link className='text-blue-500 ml-3' to={'/signUp'}>Sign up</Link>
-                                </p>
-                                <p className='py-6 '>Forgotten Password?
-                                    <Link className='text-blue-500 ml-3' to={'/forgot-password'}>Reset password</Link></p>
-                            </div>
+        <div style={{ backgroundImage: `url("${bg}")` }} className=" w-full bg-no-repeat bg-center bg-cover">
+            <div className="flex justify-center items-center mx-auto h-screen">
+                <div className="bg-white shadow-sm py-5 px-6 rounded-2xl h-auto w-96 space-y-6">
+                    <div className="space-y-6">
+                        <div className="flex items-center justify-around gap-24 text-xl">
+                            <Link to='/'><FaArrowLeft /></Link>
+                            <h1>Logo <span className="bg-black p-1 rounded-full text-white">ID</span></h1>
+                            <FaRegQuestionCircle />
                         </div>
+                        <h1 className="text-center text-2xl font-medium text-black/75">Login with Yandex ID</h1>
+                        {/* <h1 className="text-center text-2xl font-medium text-black/75">Sign in to continue</h1> */}
                     </div>
+
+                    <div className="flex justify-center items-center flex-col space-y-3">
+                        {/* Switch for mail and telephone */}
+                        <label className="switch relative inline-block w-56 h-12 ">
+                            <input type="checkbox" className="opacity-0 w-0 h-0" />
+                            <span className="slider absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-100 rounded-2xl"></span>
+                        </label>
+                        {/* Input field */}
+                        <input type="search" name="Search" placeholder="Login or Email" className="w-56 py-3 lg:py-3 px-5 lg:px-20 text-xl rounded-2xl focus:outline-none border-gray-400 border-2 text-left" autoComplete="off" />
+                        {/* Button */}
+                        <button className="w-56 py-3 px-5 bg-slate-800 rounded-2xl text-white">To come in</button>
+                        {/* Login using others */}
+                    </div>
+                    {/* UI for logged in user */}
+                    {/* <div className="space-y-2">
+                        <div className="flex justify-between items-center bg-gray-200 px-2 rounded-2xl py-2">
+                            <div className="flex items-center gap-2">
+                                <img src={avatar} alt="" className="w-10 h-10 object-contain rounded-full" />
+                                <h1>Raiyan Kabir</h1>
+                            </div>
+                            <IoIosArrowDown />
+                        </div>
+                        <div className="flex justify-center items-center bg-gray-200 px-2 rounded-2xl py-3 font-medium text-lg gap-2">
+                            <FaRegMessage />
+                            <h1>Login via SMS</h1>
+                        </div>
+                    </div> */}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

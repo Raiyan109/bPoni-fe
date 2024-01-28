@@ -47,9 +47,9 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="items-center flex-shrink-0 mt-4 hidden lg:flex">
-                    <button className='flex justify-center items-center py-3 px-10 bg-gray-300 rounded-2xl font-medium text-xl'>
+                    <Link to='/login' className='flex justify-center items-center py-3 px-10 bg-gray-300 rounded-2xl font-medium text-xl'>
                         Login
-                    </button>
+                    </Link>
                     <div className="flex flex-col gap-1 items-center">
                         <button className="self-center px-8 rounded"><GiHamburgerMenu /></button>
                         <h1 className="text-sm md:text-lg">Orders</h1>

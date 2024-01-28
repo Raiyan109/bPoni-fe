@@ -34,10 +34,7 @@ const routes = createBrowserRouter([
                 path: '/',
                 element: <Home />
             },
-            // {
-            //     path: '/login',
-            //     element: <Login />
-            // },
+
             // {
             //     path: '/signUp',
             //     element: <SignUp />
@@ -47,7 +44,11 @@ const routes = createBrowserRouter([
             //     element: <ForgotPassword />
             // },
         ]
-    }
+    },
+    {
+        path: '/login',
+        element: <Login />
+    },
 ])
 
 export default routes
