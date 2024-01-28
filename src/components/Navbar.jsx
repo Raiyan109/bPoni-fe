@@ -9,42 +9,47 @@ import { useState } from "react";
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false)
     return (
-        <header className="p-3  text-gray-800">
-            <div className="flex justify-between h-16 mx-auto px-3">
-                <div className='flex items-center gap-3'>
-                    <Link to='/'>Logo</Link>
-                    <div className='bg-white shadow-md rounded-md p-1 cursor-pointer w-28'>
-                        <div className='flex items-center gap-2 p-2'>
-                            <BsFillPersonFill />
-                            <BsFillPersonFill />
+        <header className="p-3 text-gray-800 border-b border-black/75">
+            <div className="flex justify-between px-3 items-center">
+                <div className="flex items-center justify-evenly gap-10">
+                    <div className='flex items-center gap-3'>
+                        <Link to='/' className="text-sm font-normal lg:text-2xl lg:font-bold border-r pr-5 mr-3 border-black/60">Logooooooooooo</Link>
+                        <div className='bg-white shadow-md rounded-md p-1 cursor-pointer w-auto lg:w-28'>
+                            <div className='flex items-center gap-2 p-2'>
+                                <BsFillPersonFill />
+                                <BsFillPersonFill />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="items-center justify-evenly space-x-3 flex">
+                        <div className="flex justify-center items-center mt-2">
+                            <div className="relative">
+                                <span className="absolute top-1 lg:top-2 left-1 lg:left-2 pl-1">
+                                    <button type="button" title="search" className="p-1 focus:outline-none focus:ring text-xl lg:text-2xl">
+                                        <CiSearch />
+                                    </button>
+                                </span>
+                                <input type="search" name="Search" placeholder="Search..." className="w-4 lg:w-60 py-1 lg:py-3 px-5 lg:px-20 text-sm rounded-2xl focus:outline-none border-gray-400 border-2 text-left" autoComplete="off" />
+                            </div>
+                        </div>
+                        <div className="flex mt-2">
+                            <div className="relative rounded-2xl w-auto focus:outline-none border-gray-400 border-2">
+                                <span className="absolute top-1 lg:top-3 left-1 lg:left-2 pl-1">
+                                    <button type="button" title="search" className="p-1 focus:outline-none focus:ring text-sm lg:text-xl">
+                                        <FaLocationArrow />
+                                    </button>
+                                </span>
+                                <button className="py-2 px-5 lg:px-12 font-bold text-xl" autoComplete="off">
+                                    <h1 className="hidden md:block">Enter delivery address</h1>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <ul className="items-stretch space-x-3 flex">
-                    <li className="flex mt-4">
-                        <div className="relative">
-                            <span className="absolute top-2 pl-1">
-                                <button type="button" title="search" className="p-1 focus:outline-none focus:ring">
-                                    <CiSearch />
-                                </button>
-                            </span>
-                            <input type="search" name="Search" placeholder="Search..." className="w-32 py-2 pl-10 text-sm rounded-lg sm:w-auto focus:outline-none border-gray-400 border-2" autoComplete="off" />
-                        </div>
-                    </li>
-                    <li className="flex mt-4">
-                        <div className="relative">
-                            <span className="absolute top-2 pl-1">
-                                <button type="button" title="search" className="p-1 focus:outline-none focus:ring">
-                                    <FaLocationArrow />
-                                </button>
-                            </span>
-                            <button className=" py-2 px-10 text-sm rounded-lg sm:w-auto focus:outline-none border-gray-400 border-2" autoComplete="off">
-                                Enter delivery address
-                            </button>
-                        </div>
-                    </li>
-                </ul>
                 <div className="items-center flex-shrink-0 mt-4 hidden lg:flex">
+                    <button className='flex justify-center items-center py-3 px-10 bg-gray-300 rounded-2xl font-medium text-xl'>
+                        Login
+                    </button>
                     <div className="flex flex-col gap-1 items-center">
                         <button className="self-center px-8 rounded"><GiHamburgerMenu /></button>
                         <h1 className="text-sm md:text-lg">Orders</h1>
