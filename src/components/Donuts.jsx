@@ -12,8 +12,12 @@ import Data from '../../public/data.json'
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import DonutSwiperBtn from './DonutSwiperBtn';
+import { useContext } from 'react';
+import { ITEM_PROVIDER } from '../context/itemContext';
+import Donut from './Donut';
 
 const Donuts = () => {
+
     return (
         <div>
             <Swiper
@@ -55,17 +59,7 @@ const Donuts = () => {
                     </div>
                     <div className='flex justify-center items-center gap-3'>
                         {Data.map(({ id, name, image, price }) => (
-                            <div key={id} className='bg-white rounded-2xl py-5 px-2 space-y-3 h-72 w-44 flex flex-col items-center'>
-                                <img src={image} className='w-20 h-20 object-contain' />
-                                <div className=''>
-                                    <h1 className='text-xl text-left'>{price}</h1>
-                                    <h2 className='mb-3'>{name}</h2>
-                                    <LuArrowUpDown className='text-gray-300 mb-3' />
-                                    <button className='flex justify-center items-center py-3 px-16 bg-primary rounded-xl'>
-                                        <FaPlus />
-                                    </button>
-                                </div>
-                            </div>
+                            <Donut key={id} name={name} image={image} price={price} id={id} />
                         ))}
                     </div>
                 </SwiperSlide>
