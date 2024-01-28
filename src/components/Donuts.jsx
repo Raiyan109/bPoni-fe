@@ -9,6 +9,9 @@ import '../styles/donut.css'
 import { LuArrowUpDown } from "react-icons/lu";
 import { FaPlus } from "react-icons/fa6";
 import Data from '../../public/data.json'
+import { IoIosArrowForward } from "react-icons/io";
+import { Link } from 'react-router-dom';
+import DonutSwiperBtn from './DonutSwiperBtn';
 
 const Donuts = () => {
     return (
@@ -27,15 +30,29 @@ const Donuts = () => {
                         slidesPerGroup: 2,
                     },
                 }}
-                scrollbar={true}
-                navigation={true}
-                pagination={{
-                    clickable: true,
-                }}
+                // scrollbar={true}
+                // navigation={true}
+                // pagination={{
+                //     clickable: true,
+                // }}
                 modules={[Keyboard, Scrollbar, Navigation, Pagination]}
                 className="mySwiper"
             >
+                <div className=''>
+                    <DonutSwiperBtn />
+                </div>
                 <SwiperSlide>
+                    <div className="card-header flex justify-between items-center gap-[300px] lg:gap-[900px]">
+                        <div className='flex items-center gap-1'>
+                            <img src={donut} alt="" className='header-img' />
+                            <h1 className='text-xl font-bold'>Donuts</h1>
+                        </div>
+
+                        <Link to='/' className='flex items-center gap-2 hover:bg-gray-200 rounded-md p-1'>
+                            <h3>All</h3>
+                            <IoIosArrowForward />
+                        </Link>
+                    </div>
                     <div className='flex justify-center items-center gap-3'>
                         {Data.map(({ id, name, image, price }) => (
                             <div key={id} className='bg-white rounded-2xl py-5 px-2 space-y-3 h-72 w-44 flex flex-col items-center'>

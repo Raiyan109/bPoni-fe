@@ -1,0 +1,21 @@
+.donutBtn1 {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    z-index: 10;
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+    /* box-shadow: 1px 3px #f0d9d9; */
+}
+
+.donutBtn2 {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    z-index: 10;
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+    /* box-shadow: 1px 3px #f0d9d9; */
+}
