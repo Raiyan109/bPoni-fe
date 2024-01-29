@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ITEM_PROVIDER } from "../context/itemContext";
+import { ITEM_PROVIDER } from "../context/ItemContext";
 
 const CartItem = ({ id, name, image, price }) => {
     const { cartItems, addToCart, removeFromCart } = useContext(ITEM_PROVIDER)
