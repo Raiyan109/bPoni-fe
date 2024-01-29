@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import Cart from "../components/Cart";
+import AllDonuts from "../components/AllDonuts";
 
 
 const Layout = () => {
@@ -38,15 +39,11 @@ const routes = createBrowserRouter([
                 path: '/',
                 element: <Home />
             },
+            {
+                path: '/all-donuts',
+                element: <AllDonuts />
+            }
 
-            // {
-            //     path: '/signUp',
-            //     element: <SignUp />
-            // },
-            // {
-            //     path: '/forgot-password',
-            //     element: <ForgotPassword />
-            // },
         ]
     },
     {

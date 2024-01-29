@@ -5,9 +5,11 @@ import { BsFillPersonFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import avatar from '../assets/avatar.jpeg'
 import { useState } from "react";
+import LocationPopup from "./LocationPopup";
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false)
+    const [showPopupLocation, setShowPopupLocation] = useState(false)
     return (
         <header className="p-3 text-gray-800 border-b border-black/75">
             <div className="flex justify-between px-3 items-center">
@@ -32,7 +34,8 @@ const Navbar = () => {
                                 <input type="search" name="Search" placeholder="Search..." className="w-4 lg:w-60 py-1 lg:py-3 px-5 lg:px-20 text-sm rounded-2xl focus:outline-none border-gray-400 border-2 text-left" autoComplete="off" />
                             </div>
                         </div>
-                        <div className="flex mt-2">
+
+                        <div className="flex mt-2" onClick={() => setShowPopupLocation(true)}>
                             <div className="relative rounded-2xl w-auto focus:outline-none border-gray-400 border-2">
                                 <span className="absolute top-1 lg:top-3 left-1 lg:left-2 pl-1">
                                     <button type="button" title="search" className="p-1 focus:outline-none focus:ring text-sm lg:text-xl">
@@ -44,6 +47,10 @@ const Navbar = () => {
                                 </button>
                             </div>
                         </div>
+
+                        {showPopupLocation &&
+                            <LocationPopup setShowPopupLocation={setShowPopupLocation} showPopupLocation={showPopupLocation} />
+                        }
                     </div>
                 </div>
                 <div className="items-center flex-shrink-0 mt-4 hidden lg:flex">

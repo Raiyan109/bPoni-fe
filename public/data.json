@@ -3,36 +3,42 @@
         "id": "1",
         "image": "../src/assets/donut.jpeg",
         "name": "Donut",
-        "price": "560"
+        "price": "560",
+        "popular": true
     },
     {
         "id": "2",
         "image": "../src/assets/donut.jpeg",
         "name": "Donut",
-        "price": "460"
+        "price": "460",
+        "popular": false
     },
     {
         "id": "3",
         "image": "../src/assets/donut.jpeg",
         "name": "Donut",
-        "price": "500"
+        "price": "500",
+        "popular": true
     },
     {
         "id": "4",
         "image": "../src/assets/donut.jpeg",
         "name": "Donut",
-        "price": "580"
+        "price": "580",
+        "popular": true
     },
     {
         "id": "5",
         "image": "../src/assets/donut.jpeg",
         "name": "Donut",
-        "price": "570"
+        "price": "570",
+        "popular": true
     },
     {
         "id": "6",
         "image": "../src/assets/donut.jpeg",
         "name": "Donut",
-        "price": "420"
+        "price": "420",
+        "popular": false
     }
 ]

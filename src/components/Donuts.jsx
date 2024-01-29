@@ -52,7 +52,7 @@ const Donuts = () => {
                             <h1 className='text-xl font-bold'>Donuts</h1>
                         </div>
 
-                        <Link to='/' className='flex items-center gap-2 hover:bg-gray-200 rounded-md p-1'>
+                        <Link to='/all-donuts' className='flex items-center gap-2 hover:bg-gray-200 rounded-md p-1'>
                             <h3>All</h3>
                             <IoIosArrowForward />
                         </Link>
