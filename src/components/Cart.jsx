@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Data from '../../public/data.json'
-import { ITEM_PROVIDER } from '../context/itemContext';
+import { ITEM_PROVIDER } from '../context/ItemContext';
 import CartItem from './CartItem';
 
 
