@@ -6,14 +6,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 import '../styles/donut.css'
-import { LuArrowUpDown } from "react-icons/lu";
-import { FaPlus } from "react-icons/fa6";
+
 import Data from '../../public/data.json'
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import DonutSwiperBtn from './DonutSwiperBtn';
-import { useContext, useState } from 'react';
-import { ITEM_PROVIDER } from '../context/itemContext';
+
 import Donut from './Donut';
 
 const Donuts = () => {

@@ -1,8 +1,7 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
-import SignUp from "../pages/SignUp";
-import ForgotPassword from "../pages/ForgotPassword";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
