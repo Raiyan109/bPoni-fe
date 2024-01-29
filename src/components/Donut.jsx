@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { LuArrowUpDown } from "react-icons/lu";
-import { ITEM_PROVIDER } from "../context/itemContext";
+import { ITEM_PROVIDER } from "../context/ItemContext";
 import DonutDetails from "./DonutDetails";
 
 const Donut = ({ id, name, image, price }) => {
