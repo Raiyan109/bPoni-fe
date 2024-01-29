@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Data from '../../public/data.json'
 import Donut from './Donut';
-import { IoIosArrowDown } from "react-icons/io";
+// import { IoIosArrowDown } from "react-icons/io";
 import { LuArrowUpDown } from "react-icons/lu";
 import { IoFilterSharp } from "react-icons/io5";
 
 const AllDonuts = () => {
     const [filterText, setFilterText] = useState('popular')
-    const [filterRadio, setFilterRadio] = useState('popular')
+
 
     const filteredList = Data.filter((d) => {
         if (filterText === 'popular') {
@@ -29,6 +29,13 @@ const AllDonuts = () => {
     }
     return (
         <div className='mt-20'>
+            <div className="text-sm breadcrumbs">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>Documents</a></li>
+                    <li>Add Document</li>
+                </ul>
+            </div>
             <div className="flex justify-between w-[1000px]">
                 <div className='w-44 py-3 bg-yellow-400 rounded-2xl mt-3 flex items-center justify-evenly gap-4 font-semibold'>
                     {/* <label htmlFor="">Filter by city</label> */}

@@ -12,11 +12,12 @@ import Data from '../../public/data.json'
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import DonutSwiperBtn from './DonutSwiperBtn';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ITEM_PROVIDER } from '../context/itemContext';
 import Donut from './Donut';
 
 const Donuts = () => {
+
 
     return (
         <div>
