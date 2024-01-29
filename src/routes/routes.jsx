@@ -33,7 +33,7 @@ const Layout = () => {
                         <h1>HI</h1>
                     </div>
                 }
-                <div className="contentContainer py-1 px-7 w-full">
+                <div className="contentContainer py-1 px-7 w-full z-30 h-screen">
                     <Outlet />
                 </div>
                 <div className="menuContainer fixed top-44 right-10">

@@ -29,13 +29,7 @@ const AllDonuts = () => {
     }
     return (
         <div className='mt-20'>
-            <div className="text-sm breadcrumbs">
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Documents</a></li>
-                    <li>Add Document</li>
-                </ul>
-            </div>
+
             <div className="flex justify-between w-[1000px]">
                 <div className='w-44 py-3 bg-yellow-400 rounded-2xl mt-3 flex items-center justify-evenly gap-4 font-semibold'>
                     {/* <label htmlFor="">Filter by city</label> */}
