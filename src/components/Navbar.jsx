@@ -11,7 +11,8 @@ const Navbar = () => {
     const [showModal, setShowModal] = useState(false)
     const [showPopupLocation, setShowPopupLocation] = useState(false)
     return (
-        <header className="p-3 text-gray-800 border-b border-black/75">
+        <header className="p-3 text-gray-800 ">
+
             <div className="flex justify-between px-3 items-center">
                 <div className="flex items-center justify-evenly gap-10">
                     <div className='flex items-center gap-3'>
@@ -82,6 +83,7 @@ const Navbar = () => {
                     </svg>
                 </button>
             </div>
+            <div className="border-b border-gray-200 pt-4 mx-12"></div>
         </header>
     );
 };
